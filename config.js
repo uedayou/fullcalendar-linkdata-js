@@ -3,11 +3,11 @@ var ldDataset = 'rdf1s1674i';
 // データセットのファイル名を指定
 var ldFileName = 'lod_challenge_events';
 
-
+// LinkData で設定した各データの名前の項目名を入力
 var labelTitle = "http://www.w3.org/2000/01/rdf-schema#label";
+// LinkData で設定した開始時間の項目名を入力
 var labelStartDate = "http://schema.org/startDate";
+// LinkData で設定した終了時間の項目名を入力（※任意)
 var labelEndDate = "http://schema.org/endDate";
 var allDayFlag = false;
-// ヨコハマアートLOD用設定
-var now = moment().subtract('days',1).format("YYYY-MM-DDT00:00:00+09:00");
 var colors = ["limegreen", "gray", "purple", "darkblue", "green", "darkorange", "darkcyan", "brown", "lightseagreen"];
