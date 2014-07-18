@@ -66,7 +66,7 @@ var _tsv2EventData = function(tsv) {
         ev.title = campos[titulos.indexOf(labelTitle)];
         ev.start = campos[titulos.indexOf(labelStartDate)];
         if (!moment(ev.start).isValid()) break;
-        if (titulos.indexOf(labelEndDate)>=0 && campos[titulos.indexOf(labelEndDate)] !== null ) {
+        if (typeof labelEndDate == 'string' && titulos.indexOf(labelEndDate)>=0 && campos[titulos.indexOf(labelEndDate)] !== null ) {
             ev.end = campos[titulos.indexOf(labelEndDate)];
         }
         ev.color = colors[num_linea%colors.length];
