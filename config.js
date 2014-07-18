@@ -9,5 +9,7 @@ var labelTitle = "http://www.w3.org/2000/01/rdf-schema#label";
 var labelStartDate = "http://schema.org/startDate";
 // LinkData で設定した終了時間の項目名を入力（※任意)
 var labelEndDate = "http://schema.org/endDate";
+
+//var defaultDate = '2013-10-01';
 var allDayFlag = false;
 var colors = ["limegreen", "gray", "purple", "darkblue", "green", "darkorange", "darkcyan", "brown", "lightseagreen"];
