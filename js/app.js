@@ -68,7 +68,14 @@ var _tsv2EventData = function(tsv) {
         ev.start = campos[titulos.indexOf(labelStartDate)];
         if (!moment(ev.start).isValid()) break;
         if (typeof labelEndDate == 'string' && titulos.indexOf(labelEndDate)>=0 && campos[titulos.indexOf(labelEndDate)] !== null ) {
-            ev.end = campos[titulos.indexOf(labelEndDate)];
+            //ev.end = campos[titulos.indexOf(labelEndDate)];
+            // 時間が0時ちょうどの場合は一日足す
+            if (moment(campos[titulos.indexOf(labelEndDate)]).format('HH:mm:ss')=="00:00:00" || allDayFlag) {
+                ev.end = moment(campos[titulos.indexOf(labelEndDate)]).add('days', 1).format();
+            }
+            else {
+                ev.end = campos[titulos.indexOf(labelEndDate)];
+            }
         }
         ev.color = colors[num_linea%colors.length];
         ev.data = tsv[num_linea].trim();

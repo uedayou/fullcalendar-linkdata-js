@@ -11,5 +11,5 @@ var labelStartDate = "http://schema.org/startDate";
 var labelEndDate = "http://schema.org/endDate";
 
 //var defaultDate = '2013-10-01';
-var allDayFlag = false;
+var allDayFlag = true;
 var colors = ["limegreen", "gray", "purple", "darkblue", "green", "darkorange", "darkcyan", "brown", "lightseagreen"];
